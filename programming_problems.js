@@ -30,3 +30,21 @@ function sum() {
 }
 
 sum();
+
+// Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+
+function multiples() {
+  let input = prompt("Please enter an integer number");
+  let inputInt = parseInt(input);
+  let result = 0;
+
+  for (i = 1; i < inputInt + 1; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      result = i + result;
+    }
+  }
+
+  return result;
+}
+
+multiples();
