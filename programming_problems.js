@@ -51,26 +51,38 @@
 
 // Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 
-function choices() {
-  let input = document.querySelector("#int-input").value;
-  let inputInt = parseInt(input);
+// function choices() {
+//   let input = document.querySelector("#int-input").value;
+//   let inputInt = parseInt(input);
+//   let result = 0;
+//   let operation = document.querySelector("#operation");
+//   let printOperation = document.querySelector("#result");
+//   let value = operation.value;
+
+//   if (value === "sum") {
+//     for (i = 1; i < inputInt + 1; i++) {
+//       result = i + result;
+//     }
+
+//     printOperation.innerHTML = result;
+//   } else {
+//     result = 1;
+//     for (i = 1; i < inputInt + 1; i++) {
+//       result = i * result;
+//     }
+
+//     printOperation.innerHTML = result;
+//   }
+// }
+
+// Write a program that prints a multiplication table for numbers up to 12.
+function table() {
+  const selectedNumber = 12;
   let result = 0;
-  let operation = document.querySelector("#operation");
-  let printOperation = document.querySelector("#result");
-  let value = operation.value;
-
-  if (value === "sum") {
-    for (i = 1; i < inputInt + 1; i++) {
-      result = i + result;
-    }
-
-    printOperation.innerHTML = result;
-  } else {
-    result = 1;
-    for (i = 1; i < inputInt + 1; i++) {
-      result = i * result;
-    }
-
-    printOperation.innerHTML = result;
+  for (i = 1; i < selectedNumber + 1; i++) {
+    result = i * selectedNumber;
+    console.log(result);
   }
 }
+
+table();
