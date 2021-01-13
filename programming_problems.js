@@ -91,29 +91,52 @@
 
 //Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
 
-function game() {
-  const setNumber = 27;
-  let counter = 1;
-  let input = prompt("Guess an integer number. Between 1 - 50");
-  let inputInt = parseInt(input);
+// function game() {
+//   const setNumber = 27;
+//   let counter = 1;
+//   let input = prompt("Guess an integer number. Between 1 - 50");
+//   let inputInt = parseInt(input);
 
-  while (inputInt !== setNumber) {
-    if (inputInt > setNumber) {
-      console.log("Your number is larger. Try again");
-      let newTry = prompt("Your number is larger. Try again");
-      let newInt = parseInt(newTry);
-      inputInt = newInt;
-    } else {
-      console.log("Your number is smaller. Try again");
-      let newTry = prompt("Your number is smaller. Try again");
-      let newInt = parseInt(newTry);
-      inputInt = newInt;
-    }
-    counter = counter + 1;
-  }
+//   while (inputInt !== setNumber) {
+//     if (inputInt > setNumber) {
+//       console.log("Your number is larger. Try again");
+//       let newTry = prompt("Your number is larger. Try again");
+//       let newInt = parseInt(newTry);
+//       inputInt = newInt;
+//     } else {
+//       console.log("Your number is smaller. Try again");
+//       let newTry = prompt("Your number is smaller. Try again");
+//       let newInt = parseInt(newTry);
+//       inputInt = newInt;
+//     }
+//     counter = counter + 1;
+//   }
 
-  console.log("You have guessed correctly!");
-  console.log("You needed " + counter + " tries to guess.");
-}
+//   console.log("You have guessed correctly!");
+//   console.log("You needed " + counter + " tries to guess.");
+// }
 
 //game();
+
+//Write a program that prints the next 20 leap years.
+
+function leap() {
+  let lastLeap = 2020;
+  let nextLeap = [];
+
+  while (nextLeap.length < 20) {
+    lastLeap = lastLeap + 4;
+    if (lastLeap % 4 !== 0) {
+      console.log("nadita");
+    } else if (lastLeap % 100 !== 0) {
+      nextLeap.push(lastLeap);
+    } else if (lastLeap % 400 !== 0) {
+      console.log("naca la pirinaca");
+    } else {
+      nextLeap.push(lastLeap);
+    }
+  }
+  console.log("The next 20 leaps years will be: " + nextLeap);
+}
+
+//leap();
