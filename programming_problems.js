@@ -76,15 +76,44 @@
 // }
 
 // Write a program that prints a multiplication table for numbers up to 12.
-function table() {
-  const selectedNumber = 12;
-  let result = 0;
-  for (j = 1; j < selectedNumber + 1; j++) {
-    for (i = 1; i < selectedNumber + 1; i++) {
-      result = i * j;
-      console.log(result);
+// function table() {
+//   const selectedNumber = 12;
+//   let result = 0;
+//   for (j = 1; j < selectedNumber + 1; j++) {
+//     for (i = 1; i < selectedNumber + 1; i++) {
+//       result = i * j;
+//       console.log(result);
+//     }
+//   }
+// }
+
+// table();
+
+//Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
+
+function game() {
+  const setNumber = 27;
+  let counter = 1;
+  let input = prompt("Guess an integer number. Between 1 - 50");
+  let inputInt = parseInt(input);
+
+  while (inputInt !== setNumber) {
+    if (inputInt > setNumber) {
+      console.log("Your number is larger. Try again");
+      let newTry = prompt("Your number is larger. Try again");
+      let newInt = parseInt(newTry);
+      inputInt = newInt;
+    } else {
+      console.log("Your number is smaller. Try again");
+      let newTry = prompt("Your number is smaller. Try again");
+      let newInt = parseInt(newTry);
+      inputInt = newInt;
     }
+    counter = counter + 1;
   }
+
+  console.log("You have guessed correctly!");
+  console.log("You needed " + counter + " tries to guess.");
 }
 
-table();
+//game();
