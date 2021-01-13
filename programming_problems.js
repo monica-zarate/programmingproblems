@@ -79,9 +79,11 @@
 function table() {
   const selectedNumber = 12;
   let result = 0;
-  for (i = 1; i < selectedNumber + 1; i++) {
-    result = i * selectedNumber;
-    console.log(result);
+  for (j = 1; j < selectedNumber + 1; j++) {
+    for (i = 1; i < selectedNumber + 1; i++) {
+      result = i * j;
+      console.log(result);
+    }
   }
 }
 
