@@ -32,7 +32,6 @@
 //sum();
 
 // Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
-
 // function multiples() {
 //   let input = prompt("Please enter an integer number");
 //   let inputInt = parseInt(input);
@@ -50,7 +49,6 @@
 //multiples();
 
 // Write a program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
-
 // function choices() {
 //   let input = document.querySelector("#int-input").value;
 //   let inputInt = parseInt(input);
@@ -90,7 +88,6 @@
 // table();
 
 //Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
-
 // function game() {
 //   const setNumber = 27;
 //   let counter = 1;
@@ -119,24 +116,38 @@
 //game();
 
 //Write a program that prints the next 20 leap years.
+// function leap() {
+//   let lastLeap = 2020;
+//   let nextLeap = [];
 
-function leap() {
-  let lastLeap = 2020;
-  let nextLeap = [];
-
-  while (nextLeap.length < 20) {
-    lastLeap = lastLeap + 4;
-    if (lastLeap % 4 !== 0) {
-      console.log("nadita");
-    } else if (lastLeap % 100 !== 0) {
-      nextLeap.push(lastLeap);
-    } else if (lastLeap % 400 !== 0) {
-      console.log("naca la pirinaca");
-    } else {
-      nextLeap.push(lastLeap);
-    }
-  }
-  console.log("The next 20 leaps years will be: " + nextLeap);
-}
+//   while (nextLeap.length < 20) {
+//     lastLeap = lastLeap + 4;
+//     if (lastLeap % 4 !== 0) {
+//       console.log("nadita");
+//     } else if (lastLeap % 100 !== 0) {
+//       nextLeap.push(lastLeap);
+//     } else if (lastLeap % 400 !== 0) {
+//       console.log("naca la pirinaca");
+//     } else {
+//       nextLeap.push(lastLeap);
+//     }
+//   }
+//   console.log("The next 20 leaps years will be: " + nextLeap);
+// }
 
 //leap();
+
+//Write a function that returns the largest element in a list.
+let list = [18, 21, 27, 5, 12];
+
+function getLargest() {
+  let currentLarger = 0;
+  for (i = 0; i < list.length + 1; i++) {
+    if (list[i] > currentLarger) {
+      currentLarger = list[i];
+    }
+  }
+  console.log("The largest number of the array is: " + currentLarger);
+}
+
+getLargest();
