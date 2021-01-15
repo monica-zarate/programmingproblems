@@ -142,7 +142,7 @@ let list = [18, 21, 27, 5, 12];
 
 function getLargest() {
   let currentLarger = 0;
-  for (i = 0; i < list.length + 1; i++) {
+  for (i = 0; i < list.length; i++) {
     if (list[i] > currentLarger) {
       currentLarger = list[i];
     }
