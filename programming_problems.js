@@ -138,16 +138,29 @@
 //leap();
 
 //Write a function that returns the largest element in a list.
-let list = [18, 21, 27, 5, 12];
+// let list = [18, 21, 27, 5, 12];
 
-function getLargest() {
-  let currentLarger = 0;
-  for (i = 0; i < list.length; i++) {
-    if (list[i] > currentLarger) {
-      currentLarger = list[i];
-    }
-  }
-  console.log("The largest number of the array is: " + currentLarger);
+// function getLargest() {
+//   let currentLarger = 0;
+//   for (i = 0; i < list.length; i++) {
+//     if (list[i] > currentLarger) {
+//       currentLarger = list[i];
+//     }
+//   }
+//   console.log("The largest number of the array is: " + currentLarger);
+// }
+
+// getLargest();
+
+//Write function that reverses a list, preferably in place.
+
+function reverse() {
+  let list = ["January", "February", "March", "April", "May", "June"];
+  console.log("This is the original list: " + list);
+
+  list.reverse();
+
+  console.log("This is the reversed list: " + list);
 }
 
-getLargest();
+reverse();
