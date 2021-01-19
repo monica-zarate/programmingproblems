@@ -168,11 +168,12 @@
 //Write a function that checks whether an element occurs in a list.
 
 function check(element, list) {
-  for (i = 0; i < list.length + 1; i++) {
+  for (i = 0; i < list.length; i++) {
     if (element === list[i]) {
       return true;
     }
   }
+  return false;
 }
 
 check("Apples", ["Milk", "Eggs", "Bread", "Apples", "Bananas"]);
