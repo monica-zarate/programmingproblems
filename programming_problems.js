@@ -154,13 +154,25 @@
 
 //Write function that reverses a list, preferably in place.
 
-function reverse() {
-  let list = ["January", "February", "March", "April", "May", "June"];
-  console.log("This is the original list: " + list);
+// function reverse() {
+//   let list = ["January", "February", "March", "April", "May", "June"];
+//   console.log("This is the original list: " + list);
 
-  list.reverse();
+//   list.reverse();
 
-  console.log("This is the reversed list: " + list);
+//   console.log("This is the reversed list: " + list);
+// }
+
+//reverse();
+
+//Write a function that checks whether an element occurs in a list.
+
+function check(element, list) {
+  for (i = 0; i < list.length + 1; i++) {
+    if (element === list[i]) {
+      return true;
+    }
+  }
 }
 
-reverse();
+check("Apples", ["Milk", "Eggs", "Bread", "Apples", "Bananas"]);
