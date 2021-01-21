@@ -180,15 +180,27 @@
 
 //Write a function that returns the elements on odd positions in a list
 
-function odd(list) {
-  let oddList = [];
+// function odd(list) {
+//   let oddList = [];
+//   for (i = 0; i < list.length; i++) {
+//     if (list[i] % 2 !== 0) {
+//       oddList.push(list[i]);
+//     }
+//   }
+//   return oddList;
+// }
+
+// let newList = odd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+// console.log(newList);
+
+//Write a function that computes the running total of a list.
+
+function computing(list) {
+  let result = 0;
   for (i = 0; i < list.length; i++) {
-    if (list[i] % 2 !== 0) {
-      oddList.push(list[i]);
-    }
+    result = result + list[i];
   }
-  return oddList;
+  console.log("The compute of the list is: ", result);
 }
 
-let newList = odd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-console.log(newList);
+computing([20, 50, 10, 5, 5, 30]);
