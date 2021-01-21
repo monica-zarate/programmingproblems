@@ -167,13 +167,28 @@
 
 //Write a function that checks whether an element occurs in a list.
 
-function check(element, list) {
+// function check(element, list) {
+//   for (i = 0; i < list.length; i++) {
+//     if (element === list[i]) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// check("Apples", ["Milk", "Eggs", "Bread", "Apples", "Bananas"]);
+
+//Write a function that returns the elements on odd positions in a list
+
+function odd(list) {
+  let oddList = [];
   for (i = 0; i < list.length; i++) {
-    if (element === list[i]) {
-      return true;
+    if (list[i] % 2 !== 0) {
+      oddList.push(list[i]);
     }
   }
-  return false;
+  return oddList;
 }
 
-check("Apples", ["Milk", "Eggs", "Bread", "Apples", "Bananas"]);
+let newList = odd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+console.log(newList);
