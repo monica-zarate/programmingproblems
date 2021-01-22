@@ -195,12 +195,29 @@
 
 //Write a function that computes the running total of a list.
 
-function computing(list) {
-  let result = 0;
-  for (i = 0; i < list.length; i++) {
-    result = result + list[i];
+// function computing(list) {
+//   let result = 0;
+//   for (i = 0; i < list.length; i++) {
+//     result = result + list[i];
+//   }
+//   console.log("The compute of the list is: ", result);
+// }
+
+// computing([20, 50, 10, 5, 5, 30]);
+
+//Write a function that tests whether a string is a palindrome.
+
+function test(string) {
+  let chars1 = "";
+  for (i = string.length - 1; i >= 0; i--) {
+    chars1 = chars1 + string[i];
   }
-  console.log("The compute of the list is: ", result);
+  console.log(chars1);
+  if (chars1 === string) {
+    console.log("This is a palindrome word");
+  } else {
+    console.log("This is not a palindrome word");
+  }
 }
 
-computing([20, 50, 10, 5, 5, 30]);
+test("solos");
