@@ -207,17 +207,41 @@
 
 //Write a function that tests whether a string is a palindrome.
 
-function test(string) {
-  let chars1 = "";
-  for (i = string.length - 1; i >= 0; i--) {
-    chars1 = chars1 + string[i];
+// function test(string) {
+//   let chars1 = "";
+//   for (i = string.length - 1; i >= 0; i--) {
+//     chars1 = chars1 + string[i];
+//   }
+//   console.log(chars1);
+//   if (chars1 === string) {
+//     console.log("This is a palindrome word");
+//   } else {
+//     console.log("This is not a palindrome word");
+//   }
+// }
+
+// test("solos");
+
+//Write three functions that compute the sum of the numbers in a list: using a for-loop, a while-loop and recursion. (Subject to availability of these constructs in your language of choice.)
+
+function computeFor(list) {
+  let sum = 0;
+  for (i = 0; i < list.length; i++) {
+    sum = sum + list[i];
   }
-  console.log(chars1);
-  if (chars1 === string) {
-    console.log("This is a palindrome word");
-  } else {
-    console.log("This is not a palindrome word");
-  }
+  console.log("The sum of the numbers in the list is: " + sum);
 }
 
-test("solos");
+computeFor([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+function computeWhile(list) {
+  let sum = 0;
+  let i = 0;
+  while (i < list.length) {
+    sum = sum + list[i];
+    i = i + 1;
+  }
+  console.log("The sum of the numbers in the list is: " + sum);
+}
+
+computeWhile([1, 2, 3, 4, 5, 6, 7, 8, 9]);
