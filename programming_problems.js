@@ -224,24 +224,41 @@
 
 //Write three functions that compute the sum of the numbers in a list: using a for-loop, a while-loop and recursion. (Subject to availability of these constructs in your language of choice.)
 
-function computeFor(list) {
-  let sum = 0;
-  for (i = 0; i < list.length; i++) {
-    sum = sum + list[i];
+// function computeFor(list) {
+//   let sum = 0;
+//   for (i = 0; i < list.length; i++) {
+//     sum = sum + list[i];
+//   }
+//   console.log("The sum of the numbers in the list is: " + sum);
+// }
+
+// computeFor([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+// function computeWhile(list) {
+//   let sum = 0;
+//   let i = 0;
+//   while (i < list.length) {
+//     sum = sum + list[i];
+//     i = i + 1;
+//   }
+//   console.log("The sum of the numbers in the list is: " + sum);
+// }
+
+// computeWhile([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+//Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12. (This question is tricky if your programming language makes it difficult to pass functions as arguments.)
+
+function onAll(lista, square) {
+  for (i = 0; i < lista.length; i++) {
+    square(lista[i]);
   }
-  console.log("The sum of the numbers in the list is: " + sum);
 }
 
-computeFor([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let square = (elemento) => {
+  console.log(elemento * elemento);
+};
 
-function computeWhile(list) {
-  let sum = 0;
-  let i = 0;
-  while (i < list.length) {
-    sum = sum + list[i];
-    i = i + 1;
-  }
-  console.log("The sum of the numbers in the list is: " + sum);
-}
-
-computeWhile([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+onAll(
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+  square
+);
