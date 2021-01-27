@@ -248,17 +248,32 @@
 
 //Write a function on_all that applies a function to every element of a list. Use it to print the first twenty perfect squares. The perfect squares can be found by multiplying each natural number with itself. The first few perfect squares are 1*1= 1, 2*2=4, 3*3=9, 4*4=16. Twelve for example is not a perfect square because there is no natural number m so that m*m=12. (This question is tricky if your programming language makes it difficult to pass functions as arguments.)
 
-function onAll(lista, square) {
-  for (i = 0; i < lista.length; i++) {
-    square(lista[i]);
+// function onAll(lista, square) {
+//   for (i = 0; i < lista.length; i++) {
+//     square(lista[i]);
+//   }
+// }
+
+// let square = (elemento) => {
+//   console.log(elemento * elemento);
+// };
+
+// onAll(
+//   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+//   square
+// );
+
+//Write a function that concatenates two lists. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
+
+function join(list1, list2) {
+  let result = [];
+  for (i = 0; i < list1.length; i++) {
+    result = result + list1[i];
   }
+  for (i = 0; i < list2.length; i++) {
+    result = result + list2[i];
+  }
+  console.log(result);
 }
 
-let square = (elemento) => {
-  console.log(elemento * elemento);
-};
-
-onAll(
-  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-  square
-);
+join(["a", "b", "c"], [1, 2, 3]);
