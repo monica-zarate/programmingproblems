@@ -265,15 +265,27 @@
 
 //Write a function that concatenates two lists. [a,b,c], [1,2,3] → [a,b,c,1,2,3]
 
-function join(list1, list2) {
+// function join(list1, list2) {
+//   let result = [];
+//   for (i = 0; i < list1.length; i++) {
+//     result.push(list1[i]);
+//   }
+//   for (i = 0; i < list2.length; i++) {
+//     result.push(list2[i]);
+//   }
+//   console.log(result);
+// }
+
+// join(["a", "b", "c"], [1, 2, 3]);
+
+//Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+function combine(list1, list2) {
   let result = [];
-  for (i = 0; i < list1.length; i++) {
-    result = result + list1[i];
-  }
-  for (i = 0; i < list2.length; i++) {
-    result = result + list2[i];
+  for (i = 0; i < list1.length && i < list2.length; i++) {
+    result.push(list1[i], list2[i]);
   }
   console.log(result);
 }
 
-join(["a", "b", "c"], [1, 2, 3]);
+combine(["a", "b", "c"], [1, 2, 3]);
