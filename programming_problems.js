@@ -280,12 +280,12 @@
 
 //Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
 
-function combine(list1, list2) {
-  let result = [];
-  for (i = 0; i < list1.length && i < list2.length; i++) {
-    result.push(list1[i], list2[i]);
-  }
-  console.log(result);
-}
+// function combine(list1, list2) {
+//   let result = [];
+//   for (i = 0; i < list1.length && i < list2.length; i++) {
+//     result.push(list1[i], list2[i]);
+//   }
+//   console.log(result);
+// }
 
-combine(["a", "b", "c"], [1, 2, 3]);
+// combine(["a", "b", "c"], [1, 2, 3]);
