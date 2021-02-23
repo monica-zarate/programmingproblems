@@ -83,14 +83,67 @@
 // }
 
 //Write a program that prints a multiplication table for numbers up to 12.
-function multiplication() {
-  let result = 0;
-  for (i = 1; i <= 12; i++) {
-    for (j = 1; j <= 12; j++) {
-      result = i * j;
-      console.log(result);
-    }
-  }
-}
+// function multiplication() {
+//   let result = 0;
+//   for (i = 1; i <= 12; i++) {
+//     for (j = 1; j <= 12; j++) {
+//       result = i * j;
+//       console.log(result);
+//     }
+//   }
+// }
 
 //multiplication();
+
+//Write a guessing game where the user has to guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed.
+
+function game() {
+  let strInput = prompt(
+    "Let's play! We have an integer number between 1 and 99. Can you guess the number?"
+  );
+  let input = parseInt(strInput);
+  const number = 88;
+  let tries = 1;
+
+  while (input !== number) {
+    if (input < number) {
+      let newStrInput = prompt("Your number is smaller. Try again!");
+      let newInput = parseInt(newStrInput);
+      input = newInput;
+    } else {
+      let newStrInput = prompt("Your number is larger. Try again!");
+      let newInput = parseInt(newStrInput);
+      input = newInput;
+    }
+    tries = tries + 1;
+  }
+  alert(
+    "You have guessed correctly! You tried " +
+      tries +
+      " times before guessing the correct number."
+  );
+}
+
+//game();
+
+//Write a program that prints the next 20 leap years.
+function leap() {
+  let nextTwenty = [];
+  let lastLeap = 2020;
+
+  while (nextTwenty.length < 20) {
+    lastLeap = lastLeap + 4;
+    if (lastLeap % 4 !== 0) {
+      console.log("Common year");
+    } else if (lastLeap % 100 !== 0) {
+      nextTwenty.push(lastLeap);
+    } else if (lastLeap % 400 !== 0) {
+      console.log("Commor year");
+    } else {
+      nextTwenty.push(lastLeap);
+    }
+  }
+  console.log("The next 20 leap years will be: " + nextTwenty);
+}
+
+//leap();
