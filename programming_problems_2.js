@@ -149,103 +149,138 @@
 //leap();
 
 //Write a program that swaps values of variables.
-let a = "<xxxxxx>";
-let b = "<yyyyyy>";
-let temp;
+// let a = "<xxxxxx>";
+// let b = "<yyyyyy>";
+// let temp;
 
-function swap(one, two) {
-  console.log("Var `a` is: " + one);
-  console.log("Var `b` is: " + two);
+// function swap(one, two) {
+//   console.log("Var `a` is: " + one);
+//   console.log("Var `b` is: " + two);
 
-  temp = one;
-  one = two;
-  two = temp;
+//   temp = one;
+//   one = two;
+//   two = temp;
 
-  console.log("Var `a` is now: " + one);
-  console.log("Var `b` is now: " + two);
-}
+//   console.log("Var `a` is now: " + one);
+//   console.log("Var `b` is now: " + two);
+// }
 
 //swap(a, b);
 
 //Write a function that sorts a list using the Bubble Sort Algorithm
-function bubble(arr) {
-  for (i = 0; i < arr.length; i++) {
-    for (j = 0; j < arr.length - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-      }
-    }
-  }
-  return arr;
-}
+// function bubble(arr) {
+//   for (i = 0; i < arr.length; i++) {
+//     for (j = 0; j < arr.length - 1; j++) {
+//       if (arr[j] > arr[j + 1]) {
+//         let temp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return arr;
+// }
 
 //bubble([5, 2, 4, 3]);
 
 //Write a function that calculates the area of a geometric shape. The user can select one of four different options available.
 
-function square(side) {
-  let result = side * side;
-  return "The square's area is: " + result;
-}
+// function square(side) {
+//   let result = side * side;
+//   return "The square's area is: " + result;
+// }
 
-function rectangle(width, height) {
-  let result = width * height;
-  return "The rectangle's area is: " + result;
-}
+// function rectangle(width, height) {
+//   let result = width * height;
+//   return "The rectangle's area is: " + result;
+// }
 
-function triangle(base, height) {
-  let result = (base * height) / 2;
-  return "The triangle's area is: " + result;
-}
+// function triangle(base, height) {
+//   let result = (base * height) / 2;
+//   return "The triangle's area is: " + result;
+// }
 
-function circle(radius) {
-  const pi = 3.1415;
-  let result = pi * (radius * radius);
-  return "The circle's area is: " + result;
-}
+// function circle(radius) {
+//   const pi = 3.1415;
+//   let result = pi * (radius * radius);
+//   return "The circle's area is: " + result;
+// }
 
-function area() {
-  let input = prompt(
-    "Enter the name of the geometric shape you wish to calculate the area of, in lower cases. Available options are: Square, Rectangle, Triangle and Circle."
-  );
-  let result;
+// function area() {
+//   let input = prompt(
+//     "Enter the name of the geometric shape you wish to calculate the area of, in lower cases. Available options are: Square, Rectangle, Triangle and Circle."
+//   );
+//   let result;
 
-  if (input === "square") {
-    let sideString = prompt("Please enter the square's side length in cms");
-    let side = parseInt(sideString);
-    result = square(side);
-    console.log(result);
-  } else if (input === "rectangle") {
-    let widthString = prompt(
-      "Please enter the rectangle's width length in cms"
-    );
-    let width = parseInt(widthString);
-    let heightString = prompt(
-      "Please enter the rectangle's height length in cms"
-    );
-    let height = parseInt(heightString);
-    result = rectangle(width, height);
-    console.log(result);
-  } else if (input === "triangle") {
-    let baseString = prompt("Please enter the triangle's base length in cms");
-    let base = parseInt(baseString);
-    let heightString = prompt(
-      "Please enter the triangle's height length in cms"
-    );
-    let height = parseInt(heightString);
-    result = triangle(base, height);
-    console.log(result);
-  } else if (input === "circle") {
-    let radiusString = prompt("Please enter the circle's radius length in cms");
-    let radius = parseInt(radiusString);
-    result = circle(radius);
-    console.log(result);
-  } else {
-    let sndTry = prompt("Your selection is not supported, please try again");
-    input = sndTry;
-  }
-}
+//   if (input === "square") {
+//     let sideString = prompt("Please enter the square's side length in cms");
+//     let side = parseInt(sideString);
+//     result = square(side);
+//     console.log(result);
+//   } else if (input === "rectangle") {
+//     let widthString = prompt(
+//       "Please enter the rectangle's width length in cms"
+//     );
+//     let width = parseInt(widthString);
+//     let heightString = prompt(
+//       "Please enter the rectangle's height length in cms"
+//     );
+//     let height = parseInt(heightString);
+//     result = rectangle(width, height);
+//     console.log(result);
+//   } else if (input === "triangle") {
+//     let baseString = prompt("Please enter the triangle's base length in cms");
+//     let base = parseInt(baseString);
+//     let heightString = prompt(
+//       "Please enter the triangle's height length in cms"
+//     );
+//     let height = parseInt(heightString);
+//     result = triangle(base, height);
+//     console.log(result);
+//   } else if (input === "circle") {
+//     let radiusString = prompt("Please enter the circle's radius length in cms");
+//     let radius = parseInt(radiusString);
+//     result = circle(radius);
+//     console.log(result);
+//   } else {
+//     let sndTry = prompt("Your selection is not supported, please try again");
+//     input = sndTry;
+//   }
+// }
 
 //area();
+
+//Write two functions. First one adds the user's input to an array. Second function sorts that array using the selection sort algorithm.
+
+let list = [];
+
+function add() {
+  let number = document.getElementById("input").value;
+  list.push(number);
+  let input = document.getElementById("input");
+  input.value = "";
+}
+
+function request() {
+  let display = document.getElementById("display");
+  let sortedArray = sort(list);
+  let displayArray = sortedArray.toString();
+  display.innerText = displayArray;
+}
+
+function sort(arr) {
+  for (i = 0; i < arr.length; i++) {
+    let smaller = i;
+    for (j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[smaller]) {
+        smaller = j;
+      }
+    }
+    if (smaller != i) {
+      let temp = arr[i];
+      arr[i] = arr[smaller];
+      arr[smaller] = temp;
+    }
+  }
+  return arr;
+}
