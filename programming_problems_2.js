@@ -252,35 +252,68 @@
 
 //Write two functions. First one adds the user's input to an array. Second function sorts that array using the selection sort algorithm.
 
-let list = [];
+// let list = [];
 
-function add() {
-  let number = document.getElementById("input").value;
-  list.push(number);
-  let input = document.getElementById("input");
-  input.value = "";
-}
+// function add() {
+//   let number = document.getElementById("input").value;
+//   list.push(number);
+//   let input = document.getElementById("input");
+//   input.value = "";
+// }
 
-function request() {
-  let display = document.getElementById("display");
-  let sortedArray = sort(list);
-  let displayArray = sortedArray.toString();
-  display.innerText = displayArray;
-}
+// function request() {
+//   let display = document.getElementById("display");
+//   let sortedArray = sort(list);
+//   let displayArray = sortedArray.toString();
+//   display.innerText = displayArray;
+// }
 
-function sort(arr) {
-  for (i = 0; i < arr.length; i++) {
-    let smaller = i;
-    for (j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[smaller]) {
-        smaller = j;
-      }
-    }
-    if (smaller != i) {
-      let temp = arr[i];
-      arr[i] = arr[smaller];
-      arr[smaller] = temp;
+// function sort(arr) {
+//   for (i = 0; i < arr.length; i++) {
+//     let smaller = i;
+//     for (j = i + 1; j < arr.length; j++) {
+//       if (arr[j] < arr[smaller]) {
+//         smaller = j;
+//       }
+//     }
+//     if (smaller != i) {
+//       let temp = arr[i];
+//       arr[i] = arr[smaller];
+//       arr[smaller] = temp;
+//     }
+//   }
+//   return arr;
+// }
+
+function fizzbuzz(n) {
+  for (i = 1; i < n + 1; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log(i + " - Fizz Buzz");
+    } else if (i % 5 === 0) {
+      console.log(i + " - Buzz");
+    } else if (i % 3 === 0) {
+      console.log(i + " - Fizz");
+    } else {
+      console.log(i);
     }
   }
-  return arr;
 }
+
+//fizzbuzz(21);
+
+function mutateTheArray(n, a) {
+  let b = [];
+
+  for (i = 0; i < n; i++) {
+    if (i === 0) {
+      b.push(0 + a[0] + a[1]);
+    } else if (i === n - 1) {
+      b.push(a[i - 1] + a[i] + 0);
+    } else {
+      b.push(a[i - 1] + a[i] + a[i + 1]);
+    }
+  }
+  return b;
+}
+
+//mutateTheArray(5, [4, 0, 1, -2, 3]);
