@@ -23,20 +23,36 @@
 //centuryFromYear(1905);
 
 //Given the string, check if it is a palindrome.
-function checkPalindrome(inputString) {
-  let chars = "";
-  let isPalindrome;
-  for (i = inputString.length - 1; i >= 0; i--) {
-    chars = chars + inputString[i];
-  }
+// function checkPalindrome(inputString) {
+//   let chars = "";
+//   let isPalindrome;
+//   for (i = inputString.length - 1; i >= 0; i--) {
+//     chars = chars + inputString[i];
+//   }
 
-  if (chars === inputString) {
-    isPalindrome = true;
-  } else {
-    isPalindrome = false;
-  }
+//   if (chars === inputString) {
+//     isPalindrome = true;
+//   } else {
+//     isPalindrome = false;
+//   }
 
-  return isPalindrome;
+//   return isPalindrome;
+// }
+
+// checkPalindrome("aabaa");
+
+//Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+
+function adjacentElementsProduct(inputArray) {
+  let currentLargest = Number.MIN_SAFE_INTEGER;
+  for (i = 0; i < inputArray.length - 1; i++) {
+    let product = inputArray[i] * inputArray[i + 1];
+    console.log(product);
+    if (product > currentLargest) {
+      currentLargest = product;
+    }
+  }
+  return currentLargest;
 }
 
-checkPalindrome("aabaa");
+//adjacentElementsProduct([3, 6, -2, -5, 7, 3]);
