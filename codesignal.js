@@ -43,16 +43,25 @@
 
 //Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
 
-function adjacentElementsProduct(inputArray) {
-  let currentLargest = Number.MIN_SAFE_INTEGER;
-  for (i = 0; i < inputArray.length - 1; i++) {
-    let product = inputArray[i] * inputArray[i + 1];
-    console.log(product);
-    if (product > currentLargest) {
-      currentLargest = product;
-    }
-  }
-  return currentLargest;
-}
+// function adjacentElementsProduct(inputArray) {
+//   let currentLargest = Number.MIN_SAFE_INTEGER;
+//   for (i = 0; i < inputArray.length - 1; i++) {
+//     let product = inputArray[i] * inputArray[i + 1];
+//     console.log(product);
+//     if (product > currentLargest) {
+//       currentLargest = product;
+//     }
+//   }
+//   return currentLargest;
+// }
 
 //adjacentElementsProduct([3, 6, -2, -5, 7, 3]);
+
+//Below we will define an n-interesting polygon. Your task is to find the area of a polygon for a given n.
+
+function shapeArea(n) {
+  let result = n * n + (n - 1) * (n - 1);
+  return result;
+}
+
+//shapeArea(3);
